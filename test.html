@@ -31,7 +31,7 @@
   <body>
     <div id="app">
       <!-- PARTIE D'AFFICHAGE ===== 1 -->
-      <h1>Show</h1>
+      <h1>Show {{title}}</h1>
     </div>
 
     <!-- Installation d'axios -->
@@ -41,6 +41,11 @@
       // Création d'une application de Vue 3
       app = Vue.createApp({
         // PARTIE APPLICATION VUE ===== 2
+        data() {
+          return {
+            title: "test title",
+          };
+        },
       });
       let vm = app.mount("#app");
     </script>
